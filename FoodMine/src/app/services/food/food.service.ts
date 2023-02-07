@@ -34,7 +34,7 @@ export class FoodService {
       },
       {
         id: 3,
-        name: 'Pizza',
+        name: 'MoiMoi',
         cookTime: '10-20',
         price: 10,
         favorite: false,
