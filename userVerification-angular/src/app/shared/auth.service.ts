@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -51,7 +52,7 @@ export class AuthService {
   // Forgot password
   forgotPassword(email : string) {
     this.fireauth.sendPasswordResetEmail(email).then(() => {
-      this.router.navigate(['/verify-email']);
+      this.router.navigate(['/login']);
     }, err => {
         alert('Something went wrong');
     })
@@ -65,4 +66,16 @@ export class AuthService {
       alert('Something went wrong. Not able to send mail to your email.')
     })
   }
+
+  // Sign in with Google
+  googleSignIn(){
+    return this.fireauth.signInWithPopup(new GoogleAuthProvider).then(res => {
+
+      this.router.navigate(['/dashboard']);
+      localStorage.setItem('token',JSON.stringify(res.user?.uid));
+    }, err => {
+      alert(err.message);
+    })
+  }
+
 }
