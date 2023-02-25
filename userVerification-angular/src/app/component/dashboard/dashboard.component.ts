@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Student } from 'src/app/model/student';
 import { AuthService } from 'src/app/shared/auth.service';
 import { DataService } from 'src/app/shared/data.service';
@@ -8,9 +8,16 @@ import { DataService } from 'src/app/shared/data.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit{
 
   studentsList : Student[] = [];
+  studentObj : Student = {
+    id: '',
+    first_name: '',
+    last_name: '',
+    email: '',
+    mobile: ''
+  };
   id : string = '';
   first_name : string = '';
   last_name : string = '';
@@ -19,9 +26,13 @@ export class DashboardComponent {
 
   constructor(private auth : AuthService, private data : DataService) { }
 
-  register(){
-    this.auth.logout();
+  ngOnInit(): void{
+    this.getAllStudents();
   }
+
+  // register(){
+  //   this.auth.logout();
+  // }
 
   getAllStudents() {
     this.data.getAllStudents().subscribe(res => {
@@ -37,8 +48,27 @@ export class DashboardComponent {
     })
   }
 
-  addStudent() {
+  resetForm(){
+    this.id = '';
+    this.first_name = '';
+    this.last_name = '';
+    this.email = '';
+    this.mobile = '';
+  }
 
+  addStudent() {
+    if(this.first_name == '' || this.last_name == '' || this.mobile == '' || this.email == ''){
+      alert('Fill all input fields');
+      return;
+    }
+
+    this.studentObj.id ='';
+    this.studentObj.email = this.email;
+    this.studentObj.first_name = this.first_name;
+    this.studentObj.last_name = this.last_name;
+
+    this.data.addStudent(this.studentObj);
+    this.resetForm();
   }
 
   updateStudent() {
