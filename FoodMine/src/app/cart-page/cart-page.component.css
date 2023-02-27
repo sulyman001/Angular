@@ -103,3 +103,18 @@ ul .remove-button:hover{
   content: 'Price: ';
   color: grey;
 }
+
+.checkout-btn button{
+  border-radius: 1rem;
+  border: none;
+  padding: 1rem;
+  color: black;
+  outline: none;
+}
+
+.checkout-btn button:hover{
+  opacity: 1;
+  cursor: pointer;
+  color: white;
+  background-color: green;
+}
