@@ -5,9 +5,9 @@ div{
 
 div a{
   background-color: #f0f0f0;
-  padding: .3rem .1rem;
-  margin: .2rem .15rem;
+  padding: .3rem .5rem;
+  margin: .2rem .5rem;
   border-radius: 10rem;
   font-weight: 500;
-  color: red;
+  color: #32b1cd;
 }

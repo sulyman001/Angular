@@ -16,7 +16,7 @@ ul li a{
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    color: #e72929;
+    color: #32b1cd;
 }
 
 li a:hover{
@@ -34,6 +34,7 @@ li a:hover{
     top: .5rem;
     right: 1rem;
     font-size: 1.2rem;
+    color: #e72929;
 }
 
 .favorite.not{
@@ -81,15 +82,19 @@ li a:hover{
     margin-bottom: 1rem;
 }
 
+#searchbar ::placeholder{
+  color:#ffffff;
+}
+
 #searchbar input{
   border-radius: 0 2rem 0 2rem;
   border: none;
   height: 3rem;
   width: 20rem;
-  background-color: black;
+  background-color: #32b1cd;
   padding: 1.2rem;
   font-size: 1.2rem;
   font-weight: 500;
   outline: none;
-  color: white;
+  color: #000000;
 }
