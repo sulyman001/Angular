@@ -1,13 +1,12 @@
 export const environment = {
 
   production: false,
-
   firebase: {
-    apiKey: "AIzaSyAallYNbbuUqL4jtsKvttW56mMWCO6VCSk",
-    authDomain: "testing-131d2.firebaseapp.com",
-    projectId: "testing-131d2",
-    storageBucket: "testing-131d2.appspot.com",
-    messagingSenderId: "350442324801",
-    appId: "1:350442324801:web:2f0f8f37023a649ddb97c0"
+    projectId: 'my-restaurant-ca2a4',
+    appId: '1:196918994742:web:e67d5a7c0ac11e1b1d7597',
+    storageBucket: 'my-restaurant-ca2a4.appspot.com',
+    apiKey: 'AIzaSyDRA8mgkYeKHgTYSrdMHrjviQEwGaVlRew',
+    authDomain: 'my-restaurant-ca2a4.firebaseapp.com',
+    messagingSenderId: '196918994742',
   }
 };

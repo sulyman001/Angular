@@ -1,8 +1,13 @@
-<app-search></app-search>
+<div id="searchbar">
+  <input type="text" placeholder="Search for any food" [formControl]="searchInputControl">
+</div>
+<!-- <pre>
+  {{ foods | json}}
+</pre> -->
 <app-tags></app-tags>
 <app-not-found [visible]="!foods || foods.length <=0" resetLinkText="Reset Search"></app-not-found>
 <ul>
-    <li *ngFor="let food of foods">
+    <li *ngFor="let food of foods | filterSearch: searchTerm | groupBy: 'tags': 'All';">
         <a routerLink="/food/{{food.id}}">
             <img src="{{food.imageUrl}}" alt="">
             <div class="content">
@@ -12,7 +17,7 @@
                 <span class="favorite {{food.favorite?'':'not'}}">
                     ❤
                 </span>
-                <div class="stars">
+                <!-- <div class="stars">
                     <star-rating
                     [value]="food.stars"
                     [totalstars]="5"
@@ -21,7 +26,7 @@
                     size="20px"
                     [readonly]="true">
                 </star-rating>
-                </div>
+                </div> -->
                 <div class="product-item-footer">
                     <div class="origins">
                         <span *ngFor="let origin of food.origins">
