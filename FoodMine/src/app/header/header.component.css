@@ -27,9 +27,14 @@ a.logo{
 nav ul{
     list-style-type: none;
     margin: 0;
+    display: flex;
 }
 
 nav ul li a{
     padding: 1em;
     display: inline-block;
+}
+
+nav ul li svg{
+  outline: none;
 }

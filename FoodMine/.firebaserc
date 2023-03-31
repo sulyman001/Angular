@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "my-restaurant-ca2a4": {
+      "hosting": {
+        "foodsite": [
+          "my-restaurant-ca2a4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "my-restaurant-ca2a4"
+  }
+}

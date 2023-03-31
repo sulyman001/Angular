@@ -55,7 +55,7 @@ export class HomeComponent implements OnDestroy, AfterViewInit, OnChanges {
   }
 
   getAllFood(): void{
-    console.log('Fetching');
+    // console.log('Fetching');
     this.foods = this.foodService.getAll()
     console.log(this.foods);
   }

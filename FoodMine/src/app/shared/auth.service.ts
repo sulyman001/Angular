@@ -15,14 +15,18 @@ export class AuthService {
       localStorage.setItem('token', 'true');
 
       if(res.user?.emailVerified == true){
-        this.router.navigate(['dashboard']);
+        console.log('working')
+        this.router.navigate(['/']);
       } else {
+        console.log(JSON.stringify(res.user))
+        console.log('please verify')
         this.router.navigate(['/verify-email']);
       }
 
     }, (err:any) => {
       alert(err.message);
       this.router.navigate(['/login']);
+      console.log ("false")
     })
   }
 
@@ -51,7 +55,7 @@ export class AuthService {
   // Forgot password
   forgotPassword(email : string) {
     this.fireauth.sendPasswordResetEmail(email).then(() => {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/verify-email ']);
     }, err => {
         alert('Something went wrong');
     })

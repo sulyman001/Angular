@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "foodsite": {
+    "Angular-Material": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/foodsite",
+            "outputPath": "dist/angular-material",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -51,13 +51,7 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.development.ts"
-                }
-              ]
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -66,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "foodsite:build:production"
+              "browserTarget": "Angular-Material:build:production"
             },
             "development": {
-              "browserTarget": "foodsite:build:development"
+              "browserTarget": "Angular-Material:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "foodsite:build"
+            "browserTarget": "Angular-Material:build"
           }
         },
         "test": {
@@ -96,16 +90,6 @@
               "src/styles.css"
             ],
             "scripts": []
-          }
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {
-            "prerender": false,
-            "ssr": false,
-            "browserTarget": "foodsite:build:production",
-            "firebaseProject": "my-restaurant-ca2a4",
-            "firebaseHostingSite": "my-restaurant-ca2a4"
           }
         }
       }
