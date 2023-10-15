@@ -45,7 +45,7 @@ export class FoodService {
         origins: ['italy'],
         stars: 4.5,
         imageUrl: '/assets/image/foods/image1.jpg',
-        tags: ['FastFood', 'Amala', 'Lunch'],
+        tags: [ 'Amala', 'Lunch'],
       },
       {
         id: 2,
@@ -67,7 +67,7 @@ export class FoodService {
         origins: ['italy'],
         stars: 4.5,
         imageUrl: '/assets/image/foods/image3.jpg',
-        tags: ['FastFood', 'MoiMoi', 'Lunch'],
+        tags: ['FastFood', 'MoiMoi', 'Breakfast'],
       },
       {
         id: 4,
@@ -89,7 +89,7 @@ export class FoodService {
         origins: ['italy'],
         stars: 4.5,
         imageUrl: '/assets/image/foods/image5.jpg',
-        tags: ['FastFood', 'Ofada Rice', 'Lunch'],
+        tags: [ 'Ofada Rice', 'Breakfast'],
       },
       {
         id: 6,
@@ -111,7 +111,7 @@ export class FoodService {
         origins: ['italy'],
         stars: 4.5,
         imageUrl: '/assets/image/foods/image7.jpg',
-        tags: ['FastFood', 'Jollof Rice', 'Lunch'],
+        tags: [ 'Jollof Rice', 'Breakfast'],
       },
       {
         id: 8,
@@ -122,7 +122,7 @@ export class FoodService {
         origins: ['italy'],
         stars: 4.5,
         imageUrl: '/assets/image/foods/image8.jpg',
-        tags: ['FastFood', 'Yam', 'Lunch'],
+        tags: [ 'Yam', 'Lunch'],
       },
     ]
   }
