@@ -1,0 +1,220 @@
+.home-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: #5352EC;
+    background-image: url('../../../assets/icons/spiral_pattern.svg');
+    background-blend-mode: color-burn;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    margin-top: 4.125rem;
+    padding: 8.286rem 4.25rem 8.286rem 4.25rem;
+
+    .title {
+        color: #FFFFFE;
+        font-size: 7.5rem;
+        line-height: 7.9rem;
+        font-weight: 900;
+    }
+
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        margin-top: 2.143rem;
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1536px) {
+        margin-top: 2.143rem;
+    }
+
+    @media screen and (max-width:767px) {
+        margin-top: 3.5rem;
+        padding: 4.75rem 2rem 4.5rem 2rem;
+
+        .title {
+            font-size: 3.5rem;
+            line-height: 4.417rem;
+        }
+    }
+
+
+    & p {
+        color: #C2C1F9;
+        font-size: 1.2rem;
+        line-height: normal;
+        font-weight: 400;
+
+        @media screen and (max-width:480px) {
+            font-size: 1.2rem;
+
+            line-height: normal;
+            font-weight: 400;
+        }
+    }
+}
+
+
+.details-section {
+    padding: 3.667rem 3.667rem 3.667rem 3.667rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @media screen and (max-width:1024px) {
+        gap: 3rem;
+        padding: 1.333rem 3.333rem 3.333rem 3.333rem;
+    }
+
+    @media screen and (max-width:480px) {
+        gap: 1.6rem;
+        padding: 1rem 1.6rem 1.5rem 1.6rem;
+    }
+
+    & .desc {
+        color: #333333;
+        font-size: 1rem;
+        margin-top: 1.2rem;
+        text-align: left;
+        line-height: 1.6rem;
+
+        @media screen and (max-width:480px) {
+            font-size: 1rem;
+        }
+    }
+
+    & .cta {
+        color: #040417;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 3.513rem;
+        text-align: left;
+        line-height: normal;
+
+
+        @media screen and (max-width:1024px) {
+            font-size: 3.2rem;
+            line-height: normal;
+        }
+
+        @media screen and (max-width: 991px) {
+            font-size: 2.5rem;
+        }
+
+        @media screen and (max-width:480px) {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+}
+
+.rewards {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem 0;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width:480px) {
+        gap: 1.5rem 0;
+    }
+}
+
+.reward-alt {
+    background-color: #5352EC !important;
+    background-image: url('../../../assets/icons/pattern.svg') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background-position: 1rem 1rem;
+}
+
+.get-started-btn {
+    padding: .75rem 1.5rem;
+    border-radius: 6.25rem;
+    background: #FFFFFE;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    width: fit-content;
+    align-items: center;
+    text-decoration: none;
+    color: #312ED2;
+    font-size: 0.875rem;
+}
+
+.reward-card {
+    background-color: #F5F5FE;
+    border-radius: 1.25rem;
+    width: 31%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 2rem 3rem;
+
+    @media screen and (max-width:767px) {
+        width: 45%;
+    }
+
+    @media screen and (max-width:480px) {
+        width: 100%;
+        padding: 1.5rem;
+        height: 30rem;
+        padding: 2rem;
+    }
+
+    & .title {
+        font-weight: 600;
+        font-size: 1.7rem;
+        text-align: left;
+        color: #040417;
+        line-height: 2.1rem;
+
+        @media screen and (max-width:480px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    & .desc {
+        margin-top: 1rem;
+        font-size: 1rem;
+        text-align: left;
+        color: #333333;
+        line-height: 1.6rem;
+        display: flex;
+        font-weight: 400;
+        height: 30%;
+
+        @media screen and (max-width:480px) {
+            font-size: 1.1rem;
+            line-height: 1.7rem;
+        }
+    }
+
+    & .reward-body {
+        & .title {
+            font-weight: 600;
+            font-size: 1.5rem;
+            text-align: left;
+            line-height: 2rem;
+            color: #FFFFFE;
+
+            @media screen and (max-width:480px) {
+                font-size: 1.3rem;
+            }
+        }
+
+        .desc {
+            font-size: 1rem;
+            text-align: left;
+            color: #C2C1F9;
+            line-height: 1.6rem;
+            font-weight: 400;
+        }
+
+    }
+}

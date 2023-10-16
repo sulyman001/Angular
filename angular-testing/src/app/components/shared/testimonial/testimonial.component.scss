@@ -1,0 +1,234 @@
+.testimonials {
+    text-align: center;
+    padding: 5rem 0rem 3.667rem 3.667rem;
+    color: #fff;
+    background: #F5F5FE;
+    position: relative;
+
+
+    @media screen and (max-width:1024px) {
+        padding: 3.75rem 0rem 2.125rem 3.75rem;
+    }
+
+    @media screen and (max-width:480px) {
+        padding: 3rem 1.5rem 1rem 1.5rem;
+    }
+
+    & .cta {
+        color: #040417;
+        font-size: 2.25rem;
+        font-weight: 600;
+        line-height: normal;
+        text-align: center;
+        padding: 0 20%;
+        line-height: normal;
+
+        @media screen and (min-width:1200px) {
+            padding: 0 15%;
+        }
+
+        @media screen and (max-width:1024px) {
+            font-size: 2.5rem;
+            line-height: normal;
+            padding: 0 30%;
+        }
+
+        @media screen and (max-width:480px) {
+            padding: 0 15%;
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+}
+
+.rating-desc {
+    color: #040417;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    line-height: 1.5rem;
+    text-align: center;
+    font-size: 500;
+    margin-top: 1rem;
+    padding: 0 20%;
+    line-height: normal;
+
+    @media screen and (min-width:1200px) {
+        padding: 0 15%;
+    }
+
+    @media screen and (max-width:1024px) {
+        padding: 0 30%;
+    }
+
+    @media screen and (max-width:480px) {
+        padding: 0 5%;
+        margin-top: .1rem;
+    }
+}
+
+.rating {
+    display: flex;
+    gap: .5rem;
+    margin-top: 1.5rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+
+    @media screen and (max-width:480px) {
+        margin-top: 1.5rem;
+        gap: .2rem;
+    }
+
+
+    & .rating-row {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        display: flex;
+    }
+
+
+    & .rating-title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #5352EC;
+
+        @media screen and (max-width:480px) {
+            font-size: 1.3rem;
+        }
+    }
+
+    & .star {
+        display: flex;
+        flex-direction: row;
+        gap: .25rem;
+
+        & img {
+            height: 1.5rem;
+            width: auto;
+
+            @media screen and (max-width:480px) {
+                height: 1.3rem;
+            }
+        }
+    }
+}
+
+.control {
+    list-style: none;
+}
+
+.control li {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 12px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control li:hover {
+    background: #000;
+}
+
+.control li.prev {
+    left: 20px;
+}
+
+.control li.next {
+    right: 20px;
+}
+
+.tns-nav {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.tns-nav button {
+    height: 13px;
+    width: 8px;
+    background-color: #a5a5a5;
+    border: none;
+    margin-left: 7px;
+    border-radius: 50%;
+}
+
+.tns-nav .tns-nav-active {
+    background-color: black;
+}
+
+.slider-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-top: 3rem;
+    gap: 1rem;
+
+    & .slider-nav-btn {
+        background: none;
+        border: 1px solid #CCCCCC;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        display: inline-block;
+
+        & img {
+            height: 1.25rem;
+            width: 100%;
+        }
+    }
+}
+
+.testimonial-card {
+    padding: 1.5rem 2rem;
+    background: #FFFFFF;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+
+    & .testimonial-desc {
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+    }
+
+    & .testimonial-image {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        margin-right: .5rem;
+        border: 2px solid #D8D8FB;
+
+        & img {
+            height: 100;
+            width: 100%;
+        }
+    }
+
+    & .testimonial-content {
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        font-weight: 400;
+        color: #333333;
+        padding-bottom: 1.25rem;
+    }
+
+    & .testimonial-author {
+        color: #040417;
+        font-size: 1rem;
+        text-align: left;
+        font-weight: 500;
+    }
+}

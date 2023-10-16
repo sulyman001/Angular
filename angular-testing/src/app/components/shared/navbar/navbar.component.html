@@ -1,0 +1,50 @@
+<app-mobile-nav [isAlt]="isAlt"></app-mobile-nav>
+<div class="app-nav d-lg-block d-none fixed-top" [ngClass]="{'alt-nav' : isAlt == true}">
+    <div class="app-navigation">
+        <a class="brand animate__animated animate__slideInLeft" routerLink="">
+            <img [src]="isAlt == true ? 'assets/icons/logo_dark.svg' : 'assets/icons/logo_light.svg'">
+        </a>
+        <ul class="navigation animate__animated animate__fadeIn">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]=" [''] " routerLinkActive="active" #rla="routerLinkActive"
+                    [ngClass]="{'nav-alt-link' : isAlt == true}" [routerLinkActiveOptions]="{exact: true}">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/rates']" routerLinkActive="active" #rl1="routerLinkActive"
+                    [ngClass]="{'nav-alt-link' : isAlt == true}">
+                    Rates
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/rewards']" routerLinkActive="active" #rl2="routerLinkActive"
+                    [ngClass]="{'nav-alt-link' : isAlt == true}">
+                    Rewards
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://giftcardstonaira.com/posts/"
+                    [ngClass]="{'nav-alt-link' : isAlt == true}" target="_blank">
+                    Blog
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/download']" routerLinkActive="active" #rl4="routerLinkActive"
+                    [ngClass]="{'nav-alt-link' : isAlt == true}">
+                    Download
+                </a>
+            </li>
+        </ul>
+        <div class="get-started animate__animated animate__slideInRight">
+            <a class="btn login-btn" [ngClass]="{'login-alt' : isAlt == true}"
+                href="https://app.giftcardstonaira.com/login" target="_blank">
+                Login
+            </a>
+            <a class="btn get-started-btn" [ngClass]="{'get-started-alt' : isAlt == true}"
+                href="https://app.giftcardstonaira.com/register" target="_blank">
+                Get Started
+            </a>
+        </div>
+    </div>
+</div>

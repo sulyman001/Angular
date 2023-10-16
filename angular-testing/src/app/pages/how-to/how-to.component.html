@@ -1,0 +1,126 @@
+<app-navbar></app-navbar>
+<div class="home-cta">
+    <div class="row">
+        <div class="col-md-6 col-lg-7 col-sm-12">
+            <div class="h-100 d-flex flex-column justify-content-between">
+                <div class="cta">
+                    <h3 class="title" data-aos="fade-zoom-in" data-aos-duration="1000">
+                        Looking For<br>Where To Sell Your Steam Gift Cards?
+                    </h3>
+                    <p data-aos="fade-zoom-in" data-aos-duration="1000">Giftcardstonaira is the best app and website to
+                        sell your gift cards at high rates for instant
+                        cash.
+                    </p>
+                </div>
+                <img [src]="'assets/images/giftcards/steam.png'" class="home-img">
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-5 col-sm-12">
+            <div class="rate-calculator">
+                <div class="calculator" #absoluteEl>
+                    <div class="toggler">
+                        <button class="btn toggle-btn" (click)="updateCurrency('Naira')"
+                            [ngClass]="{'active' : currency === 'Naira'}">Naira (₦)</button>
+                        <button class="btn toggle-btn" (click)="updateCurrency('Cedis')"
+                            [ngClass]="{'active' : currency === 'Cedis'}">Ghana Cedis (GH₵)</button>
+                    </div>
+                    <div class="calculator-form">
+                        <div class="form-group">
+                            <label>Sub-category</label>
+                            <select class="form-select theme-select" aria-label="Default select example"
+                                [ngClass]="{'empty-select': selectedSubCategory == undefined}" name="subcategory"
+                                [(ngModel)]="selectedSubCategory" (change)="selectSubCategory()"
+                                [disabled]="filteredSubcategories.length < 1">
+                                <option [ngValue]="item"
+                                    *ngFor="let item of filteredSubcategories;let i = index;trackBy: trackByFn">{{
+                                    item?.name }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Card Amount</label>
+                            <input type="number" class="form-control auth-form-control" placeholder="Enter card Amount"
+                                [(ngModel)]="amount" name="card_amount" (keyup)="calculateAmount()">
+                        </div>
+                        <div class="cash-value">
+                            <h6 class="title">Cash Value</h6>
+                            <h3 class="amount"><span class="currency">{{ currency == 'Naira' ? '₦' : 'GH₵'}}</span>{{
+                                payOut | number}}
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="calculator-footer">
+
+                        <div class="d-flex flex-column gap-2 w-100 mt-3">
+                            <button class="btn theme-btn">Get Started</button>
+                            <p class="note">Amount calculated based on current rate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="details-section" #nextSection>
+    <div class="mt-5">
+        <h3 class="cta">About Steam Gift Card</h3>
+        <p class="desc desc-2">Steam cards are gift cards that can be redeemed for Steam credits.
+            Using the Steam gift card, gamers can purchase games, downloadable content, and in-game purchases.
+            Typically, physical Steam cards have a value of $20, $30, $50, and $100 while the digital cards are
+            available in denominations of $5, $10, $25, $50, and $100.
+        </p>
+    </div>
+    <div>
+        <h3 class="cta">How To Sell Gift Cards on Giftcardstonaira</h3>
+        <p class="desc">If you want to sell your gift card, you can use our <a href="https://app.giftcardstonaira.com"
+                target="_blank" class="app-link">Web App</a> or
+            download our
+            <a class="app-link" href="https://gctonaira.onelink.me/iJVT" target="_blank">Mobile App</a> then
+            follow below step-by-step guide.
+        </p>
+    </div>
+    <div class="how-to">
+        <div class="how-to-card" data-aos="fade-zoom-in" data-aos-duration="1000">
+            <h4 class="how-to-title">1.</h4>
+            <p class="how-to-desc">Create an account or Sign in if you already have an account.</p>
+        </div>
+        <div class="how-to-card" data-aos="fade-zoom-in" data-aos-duration="1100">
+            <h4 class="how-to-title">2.</h4>
+            <p class="how-to-desc">Go to Wallet and add your Nigerian Bank Account or MOMO Number.</p>
+        </div>
+        <div class="how-to-card" data-aos="fade-zoom-in" data-aos-duration="1150">
+            <h4 class="how-to-title">3.</h4>
+            <p class="how-to-desc">Go to the main menu and click Sell Gift Card.</p>
+        </div>
+        <div class="how-to-card" data-aos="fade-zoom-in" data-aos-duration="1200">
+            <h4 class="how-to-title">4.</h4>
+            <p class="how-to-desc">Select Gift Card category and a subcategory.</p>
+        </div>
+        <div class="how-to-card" data-aos="fade-zoom-in" data-aos-duration="1250">
+            <h4 class="how-to-title">5.</h4>
+            <p class="how-to-desc">Enter value of the gift card and upload image (or type the ecode)</p>
+        </div>
+        <div class="how-to-card" data-aos="fade-zoom-in" data-aos-duration="1300">
+            <h4 class="how-to-title">6.</h4>
+            <p class="how-to-desc">Submit trade and wait for confirmation.</p>
+        </div>
+    </div>
+    <div>
+        <h3 class="cta">How Much Is Steam Gift Cards In Naira Today?</h3>
+        <p class="desc desc-2">You're probably wondering how much is a $100 Steam, Google Play, Amazon, Apple iTunes in
+            Naira
+            today, well the prices range from 58,000 to 78,000 Naira. On Giftcardstonaira, we pride ourselves in
+            providing the highest rates for all gift cards. So if you're looking to exchange your gift cards for cash,
+            then we're your best bet.
+        </p>
+    </div>
+</div>
+
+<component-faq></component-faq>
+<div class="download-section">
+    <app-app-download></app-app-download>
+    <app-featured></app-featured>
+</div>
+
+<app-footer></app-footer>

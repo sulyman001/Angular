@@ -1,0 +1,548 @@
+.home-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    background: #5352EC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-image: url('../../../assets/icons/pattern.svg');
+    background-position: 1rem 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin-top: 4.125rem;
+    padding: 8.286rem 10.714rem 4.286rem 10.714rem;
+    ;
+
+    .title {
+        color: #FFFFFE;
+        font-size: 7.5rem;
+        line-height: 7.6rem;
+        font-weight: 900;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        margin-top: 2.308rem;
+        padding: 8.923rem 5.538rem 6.923rem 5.538rem;
+
+        .title {
+            font-size: 6.231rem;
+            line-height: 6.531rem;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        margin-top: 2.143rem;
+        padding: 8.286rem 6.714rem 3.286rem 6.714rem;
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1536px) {
+        margin-top: 2.143rem;
+    }
+
+    @media screen and (max-width:480px) {
+        margin-top: 3.5rem;
+        padding: 4.75rem 3rem 2.5rem 3rem;
+
+        .title {
+            font-size: 4rem;
+            line-height: 4.217rem;
+        }
+    }
+
+
+    & p {
+        color: #C2C1F9;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 300;
+        max-width: 30rem;
+
+        @media screen and (max-width:1024px) {
+            max-width: 43.313rem;
+        }
+
+        @media screen and (max-width:480px) {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+        }
+    }
+}
+
+.nigerian-flag {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 15.25rem;
+    left: 13.438rem;
+    border: 0.375rem solid #8483F2;
+    background-image: url('../../../assets/icons/nigeria.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width:1024px) {
+        left: 7rem;
+    }
+
+
+    @media screen and (max-width:991px) {
+        left: 5rem;
+    }
+
+    @media screen and (max-width:480px) {
+        width: 3rem;
+        height: 3rem;
+        left: 2rem;
+        top: 17rem;
+    }
+}
+
+.ghanian-flag {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 24.875rem;
+    right: 13.438rem;
+    border: 0.375rem solid #8483F2;
+    background-image: url('../../../assets/icons/ghana.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width:1024px) {
+        right: 7rem;
+    }
+
+    @media screen and (max-width:991px) {
+        right: 5rem;
+    }
+
+    @media screen and (max-width:480px) {
+        width: 3rem;
+        height: 3rem;
+        right: 2rem;
+        top: 19rem;
+    }
+}
+
+.store-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    @media screen and (max-width:767px) {
+        justify-content: center;
+    }
+
+    @media screen and (max-width:480px) {
+        gap: .75rem;
+        flex-wrap: nowrap;
+    }
+}
+
+.web-btn {
+    padding: 1.5rem 2rem;
+    display: flex;
+    width: fit-content;
+    gap: .75rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8483F2;
+    border-radius: 6.25rem;
+    background: #EF9837;
+    text-decoration: none;
+    cursor: pointer;
+
+    & img {
+        height: 1.25rem;
+        width: auto;
+    }
+
+    & .store-label {
+        color: #040417;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    @media screen and (max-width:480px) {
+        display: none;
+    }
+}
+
+.store-btn {
+    padding: 1.5rem 2rem;
+    display: flex;
+    width: fit-content;
+    gap: .75rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8483F2;
+    border-radius: 6.25rem;
+    background: #6C6BEF;
+    cursor: pointer;
+    text-decoration: none;
+
+    & img {
+        height: 1.25rem;
+        width: auto;
+    }
+
+    & .store-label {
+        color: #FFFFFE;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    @media screen and (max-width:480px) {
+        padding: 1.5rem 1rem;
+        font-size: .75rem;
+        gap: .5rem;
+    }
+}
+
+
+.marquee-section {
+    position: relative;
+    height: 11rem;
+    overflow: hidden;
+
+    @media screen and (max-width:480px) {
+        height: 8rem;
+    }
+}
+
+
+.marquee-liner {
+    background: #312ED2;
+    transform: rotate(2deg);
+    transform-origin: top left;
+    height: 5rem;
+    margin-right: -50px;
+    margin-top: 2rem;
+    position: absolute;
+    width: 150%;
+
+    @media screen and (max-width:480px) {
+        margin-top: 0;
+        height: 5.2rem;
+    }
+}
+
+.marquee-container {
+    background: #4745D7;
+    width: 100%;
+    padding: 2.5rem 0rem;
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    --gap: 2rem;
+    gap: var(--gap);
+    user-select: none;
+
+    @media screen and (max-width:480px) {
+        padding: 1.7rem 0rem;
+        --gap: 1rem;
+    }
+}
+
+.marquee-content {
+    min-width: 100%;
+    gap: var(--gap);
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-around;
+    animation: scrolling 20s linear infinite;
+}
+
+.marquee-item {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 2rem;
+
+    @media screen and (max-width:480px) {
+        gap: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+.marquee-item img {
+    display: block;
+    width: auto;
+    image-rendering: pixelated;
+    max-height: 2rem;
+
+    @media screen and (max-width:1024px) {
+        max-height: 1.5rem;
+    }
+
+    @media screen and (max-width:480px) {
+        max-height: 1.5rem;
+    }
+}
+
+.marquee-item svg {
+    height: 1rem;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+.details-section {
+    padding: 3.667rem 6.667rem 6.667rem 3.667rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+
+    @media screen and (max-width:1024px) {
+        gap: 3rem;
+        padding: 1.333rem 3.333rem 3.333rem 3.333rem;
+    }
+
+    @media screen and (max-width:480px) {
+        gap: 1.6rem;
+        padding: 1rem 1.6rem 1.5rem 1.6rem;
+    }
+
+    & .cta {
+        color: #040417;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 3.513rem;
+        text-align: center;
+        padding: 0 20%;
+        line-height: normal;
+
+        @media screen and (min-width:1200px) {
+            padding: 0 15%;
+        }
+
+        @media screen and (max-width:1024px) {
+            font-size: 3.2rem;
+            line-height: normal;
+            padding: 0 20%;
+        }
+
+        @media screen and (max-width: 991px) {
+            font-size: 2.5rem;
+        }
+
+        @media screen and (max-width:480px) {
+            padding: 0 7%;
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+}
+
+.app-details {
+    display: flex !important;
+    gap: 2.5rem;
+    padding: 0 2rem;
+    justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    & .app-detail {
+        background: #F5F5FE;
+        border-radius: 1.25rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0 3.125rem 3.125rem 3.125rem;
+
+        @media screen and (max-width:480px) {
+            padding: 0 1.75rem 3.125rem 1.75rem;
+        }
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+
+        & img {
+            max-height: 25.125rem;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        & .title {
+            padding-top: 3rem;
+            font-size: 2.2rem;
+            line-height: 2.7rem;
+            text-align: left;
+            font-weight: 600;
+            max-width: 80%;
+            color: #040417;
+
+            @media screen and (max-width:480px) {
+                font-size: 1.5rem;
+                line-height: 2rem;
+                padding-top: 2rem;
+            }
+        }
+
+        & .desc {
+            color: #333333;
+            font-size: 1rem;
+            max-width: 90%;
+            font-weight: 400;
+            line-height: 1.7rem;
+            margin-top: .875rem;
+
+            @media screen and (max-width:1024px) {
+                font-size: 1rem;
+            }
+
+            @media screen and (max-width:480px) {
+                font-size: 1.2rem;
+                line-height: 1.7rem;
+            }
+        }
+
+        & .detail-btn {
+            margin-top: .5rem;
+            padding: .75rem 1.5rem;
+            border-radius: 6.25rem;
+            background: #5352EC;
+            display: flex;
+            justify-content: center;
+            width: fit-content;
+            align-items: center;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fffffe;
+            font-size: 0.75rem;
+        }
+    }
+}
+
+.text-pattern {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+
+    & svg {
+        position: absolute;
+        top: 60%;
+        width: 100%;
+    }
+}
+
+.why-us {
+    & .desc {
+        color: #333333;
+        font-size: 1rem;
+        margin-top: 1.2rem;
+        padding: 0 20%;
+        text-align: center;
+        line-height: 1.6rem;
+        font-weight: 400;
+
+        @media screen and (max-width:480px) {
+            font-size: 1.2rem;
+            padding: 0 5%;
+        }
+    }
+
+    & .why-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 3rem 0;
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        & .card-holder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
+
+            & .holder-image {
+                width: 7.813rem;
+                height: 7.813rem;
+                background: #F0F0FD;
+                border-radius: 1.25rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 3.5rem;
+                    width: auto;
+
+                    @media screen and (max-width:1024px) {
+                        height: 3.125rem;
+                    }
+                }
+
+                @media screen and (max-width:1024px) {
+                    width: 6rem;
+                    height: 6rem;
+                }
+
+            }
+
+            & .holder-title {
+                padding-top: 1.5rem;
+                padding-bottom: .75rem;
+                font-weight: 600;
+                font-size: 1.2rem;
+                text-align: center;
+                color: #040417;
+
+                @media screen and (max-width:480px) {
+                    padding-top: 1rem;
+                }
+            }
+
+            .holder-desc {
+                font-size: .9rem;
+                text-align: center;
+                color: #333333;
+                line-height: 1.6rem;
+                font-weight: 400;
+
+                @media screen and (max-width:480px) {
+                    padding: 0 1.2rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+    }
+}

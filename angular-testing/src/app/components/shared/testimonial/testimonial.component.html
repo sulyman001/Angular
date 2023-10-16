@@ -1,0 +1,45 @@
+<div class="testimonials">
+    <h3 class="cta">
+        Trusted by over 300,000+ customers
+    </h3>
+    <div class="rating">
+        <div class="rating-row">
+            <div class="star" *ngFor="let index of [0,1,2,3,]">
+                <img src="assets/icons/star.svg">
+            </div>
+            <div class="star"><img src="assets/icons/half_star.svg"></div>
+        </div>
+        <h3 class="rating-title">4.5+</h3>
+    </div>
+    <p class="rating-desc">
+        Score based on thousands of reviews on the<br>Google Playstore and Apple App Store
+    </p>
+    <div class="mt-5">
+        <swiper [config]="config" [virtual]="true" #swiper effect="fade">
+            <ng-template swiperSlide *ngFor="let testimonial of testimonials">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        {{ testimonial.text }}
+                    </div>
+                    <div class="testimonial-desc">
+                        <div class="testimonial-image">
+                            <img [src]="testimonial.image">
+                        </div>
+                        <div class="testimonial-author">
+                            {{ testimonial.author}}
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+        <div class="slider-nav">
+            <button class="btn slider-nav-btn" (click)="slideNext()">
+                <img src="assets/icons/arrow_left.svg">
+            </button>
+            <button class="btn slider-nav-btn">
+                <img src="assets/icons/arrow_right.svg" (click)="slidePrev()">
+            </button>
+        </div>
+    </div>
+
+</div>

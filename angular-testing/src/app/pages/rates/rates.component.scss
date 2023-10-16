@@ -1,0 +1,357 @@
+.rates-container {
+    position: relative;
+    background: #FFFFFF;
+}
+
+.rate-calculator {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20%;
+
+    @media screen and (max-width:768px) {
+        margin: 0 10%;
+    }
+
+    @media screen and (max-width:480px) {
+        margin: 0 5%;
+    }
+
+    & .calculator {
+        position: relative;
+        margin-top: -12rem;
+        background: #FFFFFE;
+        border: .75rem solid #F5F5FE;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 1.875rem;
+        width: 100%;
+        overflow: auto;
+        padding: 3.125rem;
+        flex-direction: column;
+        gap: 3.5rem;
+        align-items: flex-start;
+
+        & .calculator-form {
+            width: 100%;
+        }
+
+        @media screen and (max-width:480px) {
+            margin-top: -7rem;
+            padding: 2.25rem 1.25rem;
+        }
+
+        @media screen and (max-width:767px) {
+            align-items: center;
+        }
+
+
+        & .calculator-footer {
+            width: 100%;
+        }
+
+        & .cash-value {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: .875rem;
+            justify-content: center;
+
+            & .title {
+                font-weight: 400;
+                font-size: 1rem;
+                color: #040417;
+
+                @media screen and (max-width:767px) {
+                    font-size: 1rem;
+                }
+            }
+
+            & .currency {
+                color: #EBEBFD;
+            }
+
+            & .amount {
+                color: #5352EC;
+                font-weight: 600;
+                font-size: 3.5rem;
+
+                @media screen and (max-width:1024px) {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        & .theme-btn {
+            background: #5352EC;
+            border-radius: 6.25rem;
+            padding: 1rem 2rem;
+            border: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 1rem;
+            color: #FAFAFE;
+            font-weight: 500;
+            align-items: center;
+            gap: .625rem;
+        }
+
+        & .note {
+            color: #999999;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        & .toggler {
+            display: flex;
+            border-radius: 0.625rem;
+            background: #F2F2F2;
+            padding: 0.375rem;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 0.75rem;
+
+            & .toggle-btn {
+                background: none;
+                border-radius: 0.625rem;
+                padding: 0.875rem 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0.625rem;
+                border: none;
+                text-align: center;
+                color: #B3B3B3;
+                font-size: .875rem;
+
+                @media screen and (max-width:767px) {
+                    font-size: 1rem;
+                }
+
+                &.active {
+                    color: #000000;
+                    background: #FFFFFF;
+                }
+            }
+        }
+
+    }
+}
+
+.home-cta {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    background: #5352EC;
+    background-image: url('../../../assets/icons/pattern.svg');
+    background-position: 1rem 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin-top: 4.125rem;
+    padding: 8.286rem 10.714rem 16.286rem 10.714rem;
+
+    .title {
+        color: #FFFFFE;
+        font-size: 7.5rem;
+        line-height: 7.6rem;
+        font-weight: 900;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        margin-top: 2.308rem;
+        padding: 8.923rem 5.538rem 12.923rem 5.538rem;
+
+        .title {
+            font-size: 6.231rem;
+            line-height: 6.531rem;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        margin-top: 2.143rem;
+        padding: 8.286rem 6.714rem 14.286rem 6.714rem;
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1536px) {
+        margin-top: 2.143rem;
+    }
+
+    @media screen and (max-width:480px) {
+        margin-top: 3.5rem;
+        padding: 4.75rem 4rem 8.75rem 4rem;
+
+        .title {
+            font-size: 4rem;
+            line-height: 4.217rem;
+        }
+    }
+
+    & p {
+        color: #C2C1F9;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 300;
+        max-width: 35rem;
+
+        @media screen and (max-width:1024px) {
+            max-width: 43.313rem;
+        }
+
+        @media screen and (max-width:480px) {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+        }
+    }
+}
+
+.details-section {
+    // margin-top: 49rem;
+    padding: 2rem 6.667rem 6.667rem 3.667rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @media screen and (max-width:1024px) {
+        gap: 3rem;
+        padding: 1.333rem 3.333rem 3.333rem 3.333rem;
+    }
+
+    @media screen and (max-width:480px) {
+        gap: 4rem;
+        padding: 3rem 1.6rem 1.5rem 1.6rem;
+    }
+
+    & .cta {
+        color: #040417;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 3.513rem;
+        text-align: center;
+        padding: 0 20%;
+        line-height: normal;
+
+        @media screen and (min-width:1200px) {
+            padding: 0 15%;
+        }
+
+        @media screen and (max-width:1024px) {
+            font-size: 3.2rem;
+            line-height: normal;
+            padding: 0 20%;
+        }
+
+        @media screen and (max-width: 991px) {
+            font-size: 2.5rem;
+        }
+
+        @media screen and (max-width:480px) {
+            padding: 0 7%;
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+
+
+    & .desc {
+        color: #040417;
+        font-size: 1rem;
+        margin-top: 1.2rem;
+        padding: 0 30%;
+        text-align: center;
+        line-height: 1.6rem;
+
+        @media screen and (max-width:480px) {
+            font-size: 1rem;
+            padding: 0 3%;
+        }
+    }
+
+    & .desc-2 {
+        padding: 0 20%;
+
+        @media screen and (max-width:480px) {
+            font-size: 1rem;
+            padding: 0 3%;
+        }
+    }
+
+    & .app-link {
+        color: #5352EC;
+        text-decoration: underline;
+    }
+}
+
+.how-to {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem 2rem;
+
+    @media screen and (min-width: 991px) {
+        padding: 0 10%;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 0;
+        gap: 2rem 1rem;
+
+    }
+
+    & .how-to-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 1rem 0;
+        width: calc(100% / 3.3);
+        height: 13rem;
+        max-height: 16rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background: #FAFAFE;
+        border: 2px solid #E1E1FC;
+        border-radius: 1.25rem;
+
+        @media screen and (max-width: 767px) {
+            width: calc(100% / 2.2);
+            height: 14rem;
+        }
+
+        @media screen and (max-width: 370px) {
+            width: calc(100% / 2.2);
+            height: 15rem;
+        }
+
+        & .how-to-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-align: left;
+            color: #040417;
+        }
+
+        & .how-to-desc {
+            font-size: 1.2rem;
+            text-align: left;
+            color: #333333;
+            line-height: 1.6rem;
+            font-weight: 400;
+
+            @media screen and (max-width:480px) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

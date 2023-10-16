@@ -1,0 +1,24 @@
+.featured {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 2rem 2rem 2rem;
+
+    @media screen and (max-width:767px) {
+        padding: 0;
+        gap: 2rem;
+
+    }
+
+    & img {
+        max-height: 2.875rem;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+        width: auto;
+        cursor: pointer;
+
+        &:hover {
+            filter: none;
+        }
+    }
+}

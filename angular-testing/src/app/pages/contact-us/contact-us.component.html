@@ -1,0 +1,79 @@
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+<app-navbar [isAlt]="true"></app-navbar>
+<div class="home-cta">
+    <h3 class="title">
+        Contact Us
+    </h3>
+    <p>GiftCardsToNaira is a reliable gift cards exchanger in Nigeria.We buy your gift cards and pay in Naira.<br>We
+        make
+        instant cash payment after redemption of gift cards.</p>
+</div>
+
+<div class="details-section">
+    <div class="row">
+        <div class="col-md-7 col-sm-12">
+            <div class="contact-form">
+                <div class="w-100">
+                    <div class="form-group">
+                        <label>Full name</label>
+                        <input type="text" class="form-control auth-form-control" placeholder="Janet Doe"
+                            [(ngModel)]="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input type="email" class="form-control auth-form-control" placeholder="janet@email.com"
+                            [(ngModel)]="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <textarea type="body" class="form-control auth-form-control"
+                            placeholder="Enter a detailed description of how we can help you." [(ngModel)]="message"
+                            name="message" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="contact-footer">
+                    <div class="d-flex flex-column gap-2 w-100 mt-5">
+                        <button class="btn theme-btn" (click)="submitForm()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 col-sm-12">
+            <div class="contact-details">
+                <div class="contact-tile">
+                    <div class="contact-header">
+                        <div class="icon-holder">
+                            <img src="assets/icons/phone.svg">
+                        </div>
+                        <h4 class="title">Call Us</h4>
+                    </div>
+                    <p class="desc">Call us to speak to a member of our team.<br>We are always happy to help.</p>
+                    <h5 class="contact">+234 705 837 2518</h5>
+                </div>
+                <div class="contact-tile">
+                    <div class="contact-header">
+                        <div class="icon-holder">
+                            <img src="assets/icons/question.svg">
+                        </div>
+                        <h4 class="title">Support</h4>
+                    </div>
+                    <p class="desc">Get realtime support with our live chat feature.</p>
+                    <a class="contact" (click)="openIntercom()">Support Centre</a>
+                </div>
+                <div class="contact-tile">
+                    <div class="contact-header">
+                        <div class="icon-holder">
+                            <img src="assets/icons/envelope.svg">
+                        </div>
+                        <h4 class="title">Email Us</h4>
+                    </div>
+                    <p class="desc">Email us for general queries, including difficulties and any other problem.</p>
+                    <h5 class="contact">info@giftcardstonaira.com</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>
