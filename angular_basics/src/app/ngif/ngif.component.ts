@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class NgifComponent {
   message = "I'm read only!";
   canEdit = false;
+  binding = 'Testing';
 
   onEditClick() {
     this.canEdit = !this.canEdit;
